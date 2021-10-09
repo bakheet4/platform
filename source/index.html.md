@@ -1,5 +1,5 @@
 # Introduction
-Welcome to the EnayaPay API! You can use our API to access Payment API endpoints, which can get information on various transactions, making a payment to various providers like card transfer,telecom services and electricity.
+Welcome to the Enaya Platform API! You can use our API to access Payment API endpoints, which can get information on various transactions, making a payment to various providers like card transfer,telecom services and electricity.
 
 # Transfer
 ## Create Transaction order
