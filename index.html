@@ -1,0 +1,2158 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-a9fde460.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-720988f7.png" class="logo" alt="" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#user-account-management" class="toc-h1 toc-link" data-title="User Account Management">User Account Management</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#register" class="toc-h2 toc-link" data-title="Register">Register</a>
+                  </li>
+                  <li>
+                    <a href="#verify" class="toc-h2 toc-link" data-title="verify">verify</a>
+                  </li>
+                  <li>
+                    <a href="#login" class="toc-h2 toc-link" data-title="login">login</a>
+                  </li>
+                  <li>
+                    <a href="#rest-password" class="toc-h2 toc-link" data-title="rest password">rest password</a>
+                  </li>
+                  <li>
+                    <a href="#change-password" class="toc-h2 toc-link" data-title="change password">change password</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#cards" class="toc-h1 toc-link" data-title="Cards">Cards</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-card" class="toc-h2 toc-link" data-title="add card">add card</a>
+                  </li>
+                  <li>
+                    <a href="#get-cards" class="toc-h2 toc-link" data-title="get cards">get cards</a>
+                  </li>
+                  <li>
+                    <a href="#get-card" class="toc-h2 toc-link" data-title="get card">get card</a>
+                  </li>
+                  <li>
+                    <a href="#delete-card" class="toc-h2 toc-link" data-title="delete card">delete card</a>
+                  </li>
+                  <li>
+                    <a href="#balance-inquiry" class="toc-h2 toc-link" data-title="balance inquiry">balance inquiry</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#telecoms" class="toc-h1 toc-link" data-title="Telecoms">Telecoms</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#local" class="toc-h2 toc-link" data-title="Local">Local</a>
+                  </li>
+                  <li>
+                    <a href="#telecoms-create-order" class="toc-h2 toc-link" data-title="Telecoms Create Order">Telecoms Create Order</a>
+                  </li>
+                  <li>
+                    <a href="#telecoms-approve-order" class="toc-h2 toc-link" data-title="Telecoms approve Order">Telecoms approve Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#electricity" class="toc-h1 toc-link" data-title="Electricity">Electricity</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#electricity-local" class="toc-h2 toc-link" data-title="Electricity Local">Electricity Local</a>
+                  </li>
+                  <li>
+                    <a href="#electricity-create-order" class="toc-h2 toc-link" data-title="Electricity Create Order">Electricity Create Order</a>
+                  </li>
+                  <li>
+                    <a href="#electricity-approve-order" class="toc-h2 toc-link" data-title="Electricity approve Order">Electricity approve Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#transfer" class="toc-h1 toc-link" data-title="Transfer">Transfer</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#cashout-create-order" class="toc-h2 toc-link" data-title="Cashout Create Order">Cashout Create Order</a>
+                  </li>
+                  <li>
+                    <a href="#cash-out-approve-order" class="toc-h2 toc-link" data-title="cash out approve Order">cash out approve Order</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the EnayaPay API! You can use our API to access EnayaPay API endpoints.</p>
+<h1 id='user-account-management'>User Account Management</h1><h2 id='register'>Register</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/register/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key.</p>
+</blockquote>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/register/</code></p>
+<h3 id='description'>Description</h3>
+<p><code>the use of this endpoint to register new user using phone number as id verification .</code></p>
+<h3 id='headers'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2499++++++++"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doctor"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calicofdhfdsfsd"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_phone</td>
+<td>required</td>
+<td>user phone number</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_name</td>
+<td>required</td>
+<td>userName of user</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_password</td>
+<td>required</td>
+<td>user password</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td>None</td>
+<td>user created and otp will send in phone number</td>
+</tr>
+<tr>
+<td>302</td>
+<td>None</td>
+<td>user already registered</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;details&quot; : &quot;your number not valid&quot;}</code></td>
+<td>phone number of user not valid</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;user_password&quot;: [ &quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>502</td>
+<td><code>{&quot;details&quot; : &quot;bad getway&quot; }</code></td>
+<td>bad getway of sms getway</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service not available&quot;}</code></td>
+<td>when service not available</td>
+</tr>
+</tbody></table>
+<h2 id='verify'>verify</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/verify/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key.</p>
+</blockquote>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/verify/</code></p>
+<h3 id='description-2'>Description</h3>
+<p><code>the use of this endpoint to verification user phone number that he used</code></p>
+<h3 id='headers-2'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-2'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2499++++++++"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_otp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"454345"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-2'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_phone</td>
+<td>required</td>
+<td>user phone number</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_otp</td>
+<td>required</td>
+<td>otp of user</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjU3NTMwNyIsImV4cGlyeSI6IjIwMjEtMTEtMTMifQ.2uU8eOnw8biYxH55EblrTHOz5nM4rcP1kiIa7S46mFs&quot;,&quot;user_name&quot;: &quot;doctor&quot;}</code></td>
+<td>user verified</td>
+</tr>
+<tr>
+<td>203</td>
+<td>None</td>
+<td>wrong otp</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;user_otp&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot;user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service not available&quot;}</code></td>
+<td>when service not available</td>
+</tr>
+</tbody></table>
+<h2 id='login'>login</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/login/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd"</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key.</p>
+</blockquote>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/login/</code></p>
+<h3 id='description-3'>Description</h3>
+<p><code>this endpoint use to access user account using password</code></p>
+<h3 id='headers-3'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-3'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2499++++++++"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfdfsdfdsfs"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-3'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_phone</td>
+<td>required</td>
+<td>user phone number</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_password</td>
+<td>required</td>
+<td>password of user</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-3'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;user_name&quot;: &quot;doctor&quot;,&quot;status&quot;: &quot;active&quot;}</code></td>
+<td>user authorized</td>
+</tr>
+<tr>
+<td>203</td>
+<td>None</td>
+<td>wrong password</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;user_password&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot;user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service not available&quot;}</code></td>
+<td>when service not available</td>
+</tr>
+</tbody></table>
+<h2 id='rest-password'>rest password</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/rest/password/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/rest/password/</code></p>
+<h3 id='description-4'>Description</h3>
+<p><code>this endpoint use to rest user password when he forget</code></p>
+<h3 id='headers-4'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworioweir"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-4'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"user_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2499++++++++"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"user_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfdfsdfdsfs"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-4'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_phone</td>
+<td>required</td>
+<td>user phone number</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_password</td>
+<td>required</td>
+<td>password of user</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-4'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;user_name&quot;: &quot;doctor&quot;,&quot;status&quot;: &quot;active&quot;}</code></td>
+<td>user rest his password successful</td>
+</tr>
+<tr>
+<td>203</td>
+<td>None</td>
+<td>not valid token</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;user_password&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot;user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service not available&quot;}</code></td>
+<td>when service not available</td>
+</tr>
+</tbody></table>
+<h2 id='change-password'>change password</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/change/password/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/change/password/</code></p>
+<h3 id='description-5'>Description</h3>
+<p><code>this endpoint use to change user password that he used to access apllication .</code></p>
+<h3 id='headers-5'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-5'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"current_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gfgfdgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"new_password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dfdfsdfdsfs"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-5'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>current_password</td>
+<td>required</td>
+<td>old password that user need to change</td>
+<td>String</td>
+</tr>
+<tr>
+<td>new_password</td>
+<td>required</td>
+<td>new_password that user need to change to it</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-5'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;details&quot;: &quot;password updated successful&quot;}</code></td>
+<td>user changed his password successfully</td>
+</tr>
+<tr>
+<td>203</td>
+<td><code>{&quot;details&quot;: &quot;wrong current password&quot;}</code></td>
+<td>invalid old password</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;new_password&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot;user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service not available&quot;}</code></td>
+<td>when service not available</td>
+</tr>
+</tbody></table>
+<h1 id='cards'>Cards</h1><h2 id='add-card'>add card</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/cards/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/cards/</code></p>
+<h3 id='description-6'>Description</h3>
+<p><code>this endpoint use to add new card to your account</code></p>
+<h3 id='headers-6'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-6'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pan"</span><span class="p">:</span><span class="s2">"454567894567988"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"label"</span><span class="p">:</span><span class="s2">"bakheet"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration_date"</span><span class="p">:</span><span class="s2">"0824"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"default"</span><span class="p">:</span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-6'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pan</td>
+<td>required</td>
+<td>number of card that user want to add</td>
+<td>String</td>
+</tr>
+<tr>
+<td>label</td>
+<td>required</td>
+<td>display name of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>required</td>
+<td>expiration  date of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>default</td>
+<td>required</td>
+<td>to set card as default in use</td>
+<td>string</td>
+</tr>
+</tbody></table>
+<h3 id='response-6'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td><code>{&quot;id&quot; :1}</code></td>
+<td>card added successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;pan&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>302</td>
+<td>None</td>
+<td>card already added</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot; user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;details&quot;: &quot;unknown card number&quot;}</code></td>
+<td>user card number not valid</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unvailable for now&quot;}</code></td>
+<td>service disable for user</td>
+</tr>
+</tbody></table>
+<h2 id='get-cards'>get cards</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/cards/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET https://sandbox.enayapay.com/api/v2.1/cards/</code></p>
+<h3 id='description-7'>Description</h3>
+<p><code>this endpoint use views all cards that user assgin to his account</code></p>
+<h3 id='headers-7'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='response-7'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>[{&quot;id&quot;: 1,&quot;card_pan&quot;: &quot;454567894567988&quot;,&quot;card_expiry&quot;: &quot;0824&quot;,&quot;card_label&quot;: &quot;bakheet&quot;,&quot;card_type&quot;: &quot;International&quot;,&quot;card_image&quot;: &quot;Screenshot_from_2021-07-08_14-33-58.png&quot;,&quot;default&quot;: 1}]</code></td>
+<td>all cards that user assign to his account</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot; user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unvailable for now&quot;}</code></td>
+<td>service disable for user</td>
+</tr>
+</tbody></table>
+<h2 id='get-card'>get card</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/card/1/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET https://sandbox.enayapay.com/api/v2.1/card/1/</code></p>
+<h3 id='description-8'>Description</h3>
+<p><code>this endpoint use view one card  base on card id that user assgin to his account</code></p>
+<h3 id='headers-8'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='response-8'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>[{&quot;id&quot;: 1,&quot;card_pan&quot;: &quot;454567894567988&quot;,&quot;card_expiry&quot;: &quot;0824&quot;,&quot;card_label&quot;: &quot;bakheet&quot;,&quot;card_type&quot;: &quot;International&quot;,&quot;card_image&quot;: &quot;Screenshot_from_2021-07-08_14-33-58.png&quot;,&quot;default&quot;: 1}]</code></td>
+<td>view one card that user assign to his account</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot; user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unvailable for now&quot;}</code></td>
+<td>service disable for user</td>
+</tr>
+</tbody></table>
+<h2 id='delete-card'>delete card</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/card/1/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>DELETE https://sandbox.enayapay.com/api/v2.1/card/1/</code></p>
+<h3 id='description-9'>Description</h3>
+<p><code>this endpoint use remove card  base on card id that user assgin to his account</code></p>
+<h3 id='headers-9'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='response-9'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>204</td>
+<td><code>{&quot;details&quot;:&quot;card has been deleted successfully&quot;}</code></td>
+<td>view one card that user assign to his account</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>{&quot;details&quot;: &quot; user not registered&quot;}</code></td>
+<td>user not register</td>
+</tr>
+</tbody></table>
+<h2 id='balance-inquiry'>balance inquiry</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/balance/inquiry/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/balance/inquiry/</code></p>
+<h3 id='description-10'>Description</h3>
+<p><code>this endpoint use to provide information on the customer account balance</code></p>
+<h3 id='headers-10'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-7'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pan"</span><span class="p">:</span><span class="s2">"45456789456798893"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipin"</span><span class="p">:</span><span class="s2">"rtewrrtertretretrtrwtwrt"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"fdfregregergerlkfjerfklerjfkgerjgjre"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration_date"</span><span class="p">:</span><span class="s2">"0824"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-7'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pan</td>
+<td>required</td>
+<td>number of card that user want to known its balance</td>
+<td>String</td>
+</tr>
+<tr>
+<td>ipin</td>
+<td>required</td>
+<td>credential of customer</td>
+<td>String</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>required</td>
+<td>expiration  date of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>required</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='response-10'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;response_code&quot;: 0,&quot;balance&quot;: 400,&quot;response_status&quot;: &quot;Successful&quot;,&quot;uuid&quot;: &quot;fdfregregergerlkfjerfklerjfkgerjgjre&quot;}</code></td>
+<td>account user informations</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;pan&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>502</td>
+<td><code>{&quot;details&quot; :&quot;bad getway&quot;}</code></td>
+<td>when service provider down</td>
+</tr>
+</tbody></table>
+<h1 id='telecoms'>Telecoms</h1><h2 id='local'>Local</h2><h3 id='topup'>Topup</h3><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/telecom/110010001/topup/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/telecom/110010001/topup/</code></p>
+<h3 id='description-11'>Description</h3>
+<p><code>this endpoint use to provide topup to customer base on payeeid</code></p>
+<h3 id='headers-11'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-8'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pan"</span><span class="p">:</span><span class="s2">"43443455656653465"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipin"</span><span class="p">:</span><span class="s2">"reretertrterty5rt45"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration_date"</span><span class="p">:</span><span class="s2">"0824"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"rerrwerwerwerwerwerwrweRWrwrwr"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-8'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pan</td>
+<td>required</td>
+<td>number of card that user want to py topup by it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>ipin</td>
+<td>required</td>
+<td>credential of customer</td>
+<td>String</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>required</td>
+<td>expiration  date of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of topup that customer need to pay</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>phone_no</td>
+<td>required</td>
+<td>phone number want to charge it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>required</td>
+<td>the key used to encrypt ipin</td>
+<td>string</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge phone number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-11'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;pan&quot;: &quot;43443455656653465&quot;,&quot;acq_tran_fee&quot;: 0,&quot;dynamic_fees&quot;: 0,&quot;issuer_tran_fee&quot;: 0,&quot;payment_info&quot;: &quot;MPHONE= 2490905450785&quot;,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: &quot;Successful&quot;,&quot;amount&quot;: 300,tran_date_time&quot;: 55665455444,&quot;uuid&quot;: &quot;rerrwerwerwerwerwerwrweRWrwrwr&quot;,&quot;response_code&quot;: 0}</code></td>
+<td>Transaction done successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;pan&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td></td>
+<td>customer not registered</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h3 id='inquiry'>Inquiry</h3><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/telecom/1100055511/inquiry/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/telecom/1100055511/inquiry/</code></p>
+<h3 id='description-12'>Description</h3>
+<p><code>this endpoint use to provide information of cutomer account invoice</code></p>
+<h3 id='headers-12'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-9'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+
+    </span><span class="nl">"phone_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-9'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+
+<p>phone_no | required | phone number that customer want to known invoice for it | String</p>
+<h3 id='response-12'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;total_amount&quot;: 400,&quot;contract_number&quot;: 34234235345,&quot;acq_tran_fee&quot;: 0,&quot;dynamic_fees&quot;: 0,&quot;issuer_tran_fee&quot;: 0,&quot;tran_date_time&quot;: 65475475}</code></td>
+<td>Transaction done successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;phone_no&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td></td>
+<td>customer not registered</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h3 id='bill-payment'>Bill Payment</h3><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/telecom/110010001/topup/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-13'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/telecom/110010001/topup/</code></p>
+<h3 id='description-13'>Description</h3>
+<p><code>this endpoint use by customers bill they invoices</code></p>
+<h3 id='headers-13'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-10'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pan"</span><span class="p">:</span><span class="s2">"43443455656653465"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipin"</span><span class="p">:</span><span class="s2">"reretertrterty5rt45"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration_date"</span><span class="p">:</span><span class="s2">"0824"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"phone_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"rerrwerwerwerwerwerwrweRWrwrwr"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-10'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pan</td>
+<td>required</td>
+<td>number of card that user want to py topup by it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>ipin</td>
+<td>required</td>
+<td>credential of customer</td>
+<td>String</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>required</td>
+<td>expiration  date of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of topup that customer need to pay</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>phone_no</td>
+<td>required</td>
+<td>phone number want to charge it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>required</td>
+<td>the key used to encrypt ipin</td>
+<td>string</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge phone number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-13'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;pan&quot;: &quot;43443455656653465&quot;,&quot;acq_tran_fee&quot;: 0,&quot;dynamic_fees&quot;: 0,&quot;issuer_tran_fee&quot;: 0,&quot;payment_info&quot;: &quot;MPHONE= 2490905450785&quot;,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: &quot;Successful&quot;,&quot;amount&quot;: 300,tran_date_time&quot;: 55665455444,&quot;uuid&quot;: &quot;rerrwerwerwerwerwerwrweRWrwrwr&quot;,&quot;response_code&quot;: 0}</code></td>
+<td>Transaction done successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;pan&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td></td>
+<td>customer not registered</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h2 id='telecoms-create-order'>Telecoms Create Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/paypal/telecom/110011001/topup/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-14'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/paypal/telecom/110011001/topup/</code></p>
+<h3 id='description-14'>Description</h3>
+<p><code>this endpoint use to create order to pay topup to customer base on payeeid with paypal</code></p>
+<h3 id='headers-14'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-11'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"phone_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-11'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of topup that customer need to pay</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>phone_no</td>
+<td>required</td>
+<td>phone number want to charge it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge phone number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-14'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td><code>{&quot;approval_url&quot;: &quot;https://www.paypal.com/checkoutnow?token=45R87131522395454&quot;,&quot;order_id&quot;: &quot;45R87131522395454&quot;}</code></td>
+<td>order created  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;amount&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>402</td>
+<td><code>{&quot;details&quot;: &quot;your amount less than 1$&quot;}</code></td>
+<td>your amount less than 1$</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h2 id='telecoms-approve-order'>Telecoms approve Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/paypal/telecom/110011001/topup/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-15'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/paypal/telecom/110011001/topup/</code></p>
+<h3 id='description-15'>Description</h3>
+<p><code>this endpoint use to provide topup to customer base on payeeid with paypal</code></p>
+<h3 id='headers-15'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-12'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"approve_order_id"</span><span class="p">:</span><span class="s2">"45R87131522395454"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-12'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>45R87131522395454</td>
+<td>required</td>
+<td>order that used in payment process in paypal</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-15'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;acq_tran_fee&quot;: 0.0,&quot;dynamic_fees&quot;: 0.0,&quot;issuer_tran_fee&quot;: 0.0,&quot;payment_info&quot;: &quot;MPHONE=0905450785&quot;,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: response_status,&quot;amount_sdg&quot;: 300,&quot;amount_usd&quot;: 1.5,&quot;service_type&quot;: Zain Topup,&quot;tran_date_time&quot;: 344234324,&quot;uuid&quot;: &quot;asdadafafsaf334eadasdsadadasdq3&quot;,&quot;response_code&quot;: 0}</code></td>
+<td>transaction done  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;approve_order_id&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>{&quot;details&quot;: &quot;your order id not valid&quot;}</code></td>
+<td>user used not valid order</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h1 id='electricity'>Electricity</h1><h2 id='electricity-local'>Electricity Local</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/electricity/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-16'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/electricity/</code></p>
+<h3 id='description-16'>Description</h3>
+<p><code>this endpoint use by customers to charge they meters</code></p>
+<h3 id='headers-16'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-13'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pan"</span><span class="p">:</span><span class="s2">"43443455656653465"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"ipin"</span><span class="p">:</span><span class="s2">"reretertrterty5rt45"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expiration_date"</span><span class="p">:</span><span class="s2">"0824"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"meter_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="s2">"rerrwerwerwerwerwerwrweRWrwrwr"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-13'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pan</td>
+<td>required</td>
+<td>number of card that user want to py topup by it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>ipin</td>
+<td>required</td>
+<td>credential of customer</td>
+<td>String</td>
+</tr>
+<tr>
+<td>expiration_date</td>
+<td>required</td>
+<td>expiration  date of card</td>
+<td>String</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of topup that customer need to pay</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>meter_no</td>
+<td>required</td>
+<td>meter number want to charge it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>required</td>
+<td>the key used to encrypt ipin</td>
+<td>string</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge phone number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-16'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;acq_tran_fee&quot;: 0,&quot;dynamic_fees&quot;: 0,&quot;issuer_tran_fee&quot;: 0,&quot;pan&quot;: &quot;43443455656653465&quot;,&quot;payment_info&quot;: &quot;METER=024354364645&quot;,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: &quot;Successful&quot;, &quot;amount&quot;: 300, &quot;tranDateTime&quot;: 3343432432432, &quot;uuid&quot;: &quot;rerrwerwerwerwerwerwrweRWrwrwr&quot;, &quot;response_code&quot;: 0, &quot;account_no&quot;: 3423432423, &quot;customer_name&quot;: &quot;bakheet&quot;, &quot;meter_fees&quot;: 1,&quot;meter_number&quot;: &quot;024354364645&quot;, &quot;net_amount&quot;: 0, &quot;operator_message&quot;: &quot;Credit Purchase&quot;, &quot;token&quot;: &quot;47310897576729505616&quot;,&quot;units_in_kwh&quot;: 34, &quot;water_fees&quot;: 1}</code></td>
+<td>Transaction done successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;pan&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td>None</td>
+<td>your api key not valid</td>
+</tr>
+<tr>
+<td>404</td>
+<td></td>
+<td>customer not registered</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h2 id='electricity-create-order'>Electricity Create Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/paypal/electricity/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-17'>HTTP Request</h3>
+<p><code>POST  https://sandbox.enayapay.com/api/v2.1/paypal/electricity/</code></p>
+<h3 id='description-17'>Description</h3>
+<p><code>this endpoint use to create order to pay Electricity with paypal</code></p>
+<h3 id='headers-17'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-14'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"meter_no"</span><span class="p">:</span><span class="s2">"0905450785"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"platform"</span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-14'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of topup that customer need to pay</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>meter_no</td>
+<td>required</td>
+<td>meter number want to charge it</td>
+<td>String</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge meter number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-17'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td><code>{&quot;approval_url&quot;: &quot;https://www.paypal.com/checkoutnow?token=45R87131522395454&quot;,&quot;order_id&quot;: &quot;45R87131522395454&quot;}</code></td>
+<td>order created  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;amount&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>402</td>
+<td><code>{&quot;details&quot;: &quot;your amount less than 1$&quot;}</code></td>
+<td>your amount less than 1$</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h2 id='electricity-approve-order'>Electricity approve Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/electricity/approve/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-18'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/electricity/approve/</code></p>
+<h3 id='description-18'>Description</h3>
+<p><code>this endpoint use to approve order that customer created</code></p>
+<h3 id='headers-18'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-15'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"approve_order_id"</span><span class="p">:</span><span class="s2">"45R87131522395454"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-15'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>45R87131522395454</td>
+<td>required</td>
+<td>order that used in payment process in paypal</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-18'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{ &quot;acq_tran_fee&quot;: 0.0,&quot;dynamic_fees&quot;: 0.0,&quot;issuer_tran_fee&quot;: 0.0,&quot;payment_info&quot;: &quot;METER_NO= 2342342343&quot;,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: &quot;Successful&quot;,&quot;amount_sdg&quot;: 500,&quot;amount_usd&quot;: 1,tran_date_time&quot;: 43434324324234,&quot;uuid&quot;: &quot;fdfsdfsdfsdsaedeseadasdasdas&quot;,&quot;response_code&quot;: 0,&quot;account_no&quot;: 34433,&quot;customer_name&quot;: &quot;bakheet&quot;,&quot;meter_fees&quot;: 0.0,&quot;meter_number&quot;: 2342342343,&quot;net_amount&quot;: 4.0,&quot;operator_message&quot;: &quot;pay&quot;,&quot;token&quot;: &quot;45345345353453532532532&quot;,&quot;units_in_kwh&quot;: 45.0,&quot;water_fees&quot;: 0.0}</code></td>
+<td>transaction done  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;approve_order_id&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>{&quot;details&quot;: &quot;your order id not valid&quot;}</code></td>
+<td>user used not valid order</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h1 id='transfer'>Transfer</h1><h2 id='cashout-create-order'>Cashout Create Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/paypal/cashout/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-19'>HTTP Request</h3>
+<p><code>POST  https://sandbox.enayapay.com/api/v2.1/paypal/cashout/</code></p>
+<h3 id='description-19'>Description</h3>
+<p><code>this endpoint use to create order to send money  with paypal</code></p>
+<h3 id='headers-19'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-16'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w">       </span><span class="p">{</span><span class="w">
+         </span><span class="nl">"receiver_first_name"</span><span class="p">:</span><span class="s2">"bakheet"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"receiver_last_name"</span><span class="w"> </span><span class="p">:</span><span class="s2">"alsafy"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"receiver_phone_number"</span><span class="p">:</span><span class="s2">"249905450785"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"card_no"</span><span class="p">:</span><span class="s2">"2424242421424234234"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"transfer_type"</span><span class="p">:</span><span class="s2">"card"</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"amount"</span><span class="p">:</span><span class="mi">500</span><span class="p">,</span><span class="w">
+         </span><span class="nl">"platform"</span><span class="w"> </span><span class="p">:</span><span class="s2">"web"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-16'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>receiver_first_name</td>
+<td>required</td>
+<td>first name of receiver</td>
+<td>String</td>
+</tr>
+<tr>
+<td>receiver_last_name</td>
+<td>required</td>
+<td>last name of receiver</td>
+<td>String</td>
+</tr>
+<tr>
+<td>receiver_phone_number</td>
+<td>required</td>
+<td>phone number of receiver</td>
+<td>String</td>
+</tr>
+<tr>
+<td>card_no</td>
+<td>required</td>
+<td>card number of receiver</td>
+<td>String</td>
+</tr>
+<tr>
+<td>transfer_type</td>
+<td>required</td>
+<td>type of transfer that customer used</td>
+<td>String</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount that customer need to send</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>required</td>
+<td>platform that customer used to charge meter number</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-19'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>201</td>
+<td><code>{&quot;approval_url&quot;: &quot;https://www.paypal.com/checkoutnow?token=45R87131522395454&quot;,&quot;order_id&quot;: &quot;45R87131522395454&quot;}</code></td>
+<td>order created  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;amount&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>402</td>
+<td><code>{&quot;details&quot;: &quot;your amount less than 1$&quot;}</code></td>
+<td>your amount less than 1$</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h2 id='cash-out-approve-order'>cash out approve Order</h2><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="s2">"https://sandbox.enayapay.com/api/v2.1/paypal/cashout/approve/"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"x-api-key: gffdgdfgdfgdfgdfgdgd , token: ffdfdsfsdfds "</span>
+</code></pre></div>
+<blockquote>
+<p>Make sure to replace <code>gffdgdfgdfgdfgdfgdgd</code> with your API key and Token.</p>
+</blockquote>
+<h3 id='http-request-20'>HTTP Request</h3>
+<p><code>POST https://sandbox.enayapay.com/api/v2.1/paypal/cashout/approve/</code></p>
+<h3 id='description-20'>Description</h3>
+<p><code>this endpoint use to approve order that customer created</code></p>
+<h3 id='headers-20'>Headers</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"x-api-key"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fddfgdfgdfgdfgdfg"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsfsfkwoieriworiewriweiriwerieworiowe"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+
+</span></code></pre></div><h3 id='body-17'>Body</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"approve_order_id"</span><span class="p">:</span><span class="s2">"45R87131522395454"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+
+</span></code></pre></div><h3 id='parameters-description-17'>Parameters Description</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>45R87131522395454</td>
+<td>required</td>
+<td>order that used in payment process in paypal</td>
+<td>String</td>
+</tr>
+</tbody></table>
+<h3 id='response-20'>Response</h3>
+<table><thead>
+<tr>
+<th>StatusCode</th>
+<th>Response Data</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200</td>
+<td><code>{&quot;acq_tran_fee&quot;: 0.0,&quot;dynamic_fees&quot;: 0.0,&quot;issuer_tran_fee&quot;: 0.0,&quot;response_message&quot;: &quot;Approved&quot;,&quot;response_status&quot;: &quot;Successful,&quot;amount_sdg&quot;: 500,&quot;amount_usd&quot;: 1.5,&quot;tran_date_time&quot;: 232324341,&quot;uuid&quot;: &quot;sdasfsafsfsfs4edesfsefaefae&quot;,&quot;response_code&quot;: 0}</code></td>
+<td>transaction done  successfully</td>
+</tr>
+<tr>
+<td>400</td>
+<td><code>{ &quot;details&quot;: {&quot;approve_order_id&quot;: [&quot;This field is required.&quot;]} }</code></td>
+<td>Bad request occurred when forget parameter</td>
+</tr>
+<tr>
+<td>401</td>
+<td><code>{&quot;details&quot;: &quot;your token or api key not in header&quot;}</code></td>
+<td>your api key not valid or token</td>
+</tr>
+<tr>
+<td>406</td>
+<td><code>{&quot;response_code&quot;: 696,&quot;response_message&quot;: &quot;SYSTEM_ERROR&quot;}</code></td>
+<td>service provider errors with code</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>{&quot;details&quot;: &quot;your order id not valid&quot;}</code></td>
+<td>user used not valid order</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>{&quot;details&quot; :&quot;service unavailable&quot;}</code></td>
+<td>service disable for now</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<!-- <aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside> -->
+
+<p>The EnayaPay API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
